@@ -1,0 +1,192 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #0a0a0a;
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+}
+
+/* EFEK SPOTLIGHT MOUSE */
+.spotlight {
+  position: fixed;
+  width: 700px;
+  height: 700px;
+  background: radial-gradient(
+    circle,
+    rgba(255, 140, 0, 0.12) 0%,
+    transparent 70%
+  );
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  transition: opacity 0.3s;
+  z-index: 0;
+}
+
+/* EFEK GRID TIPIS ALA NEURA */
+.grid-bg {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+  z-index: 1;
+  pointer-events: none;
+}
+
+/* NAVBAR */
+.navbar {
+  position: sticky;
+  top: 0;
+  transition: 0.3s;
+  z-index: 3;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 24px 8%;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: 900;
+}
+.logo span {
+  color: #ff8c00;
+}
+
+.nav-links {
+  display: flex;
+  gap: 32px;
+  list-style: none;
+  align-items: center;
+}
+.nav-links a {
+  color: #888;
+  border-radius: 16px;
+  padding: 0;
+  text-decoration: none;
+  color: white;
+  transition: 0.4s;
+  overflow: hidden;
+  position: relative;
+}
+
+.project-card:hover {
+  transform: translateY(-8px);
+  border-color: #ff8c00;
+  box-shadow: 0 20px 40px rgba(255, 140, 0, 0.25);
+}
+
+.project-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-bottom: 1px solid #222;
+}
+
+.project-card h3 {
+  margin: 20px 20px 8px 20px;
+  font-size: 20px;
+}
+
+.project-card p {
+  color: #888;
+  font-size: 14px;
+  margin: 0 20px 20px 20px;
+  line-height: 1.5;
+}
+
+.tag {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: #ff8c00;
+  color: #0a0a0a;
+  font-size: 12px;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 50px;
+}
+/* LOKASI SECTION SAGE */
+.lokasi {
+  padding: 80px 5%;
+  background: #0f0f0f;
+  text-align: center;
+}
+
+.lokasi-container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.lokasi-title {
+  font-size: clamp(28px, 5vw, 40px);
+  margin-bottom: 16px;
+  color: white;
+}
+
+.lokasi-title span {
+  color: #ff8c00;
+}
+
+.lokasi-desc {
+  color: #888;
+  margin-bottom: 40px;
+  font-size: 16px;
+}
+
+.maps-wrapper {
+  background: #111;
+  padding: 16px;
+  border-radius: 24px;
+  border: 1px solid #222;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+}
+
+.maps-label {
+  color: #888;
+  margin-bottom: 12px;
+  font-size: 14px;
+}
+
+.maps-iframe {
+  width: 100%;
+  height: 400px;
+  border: 0;
+  border-radius: 16px;
+}
+
+/* RESPONSIVE HP */
+@media (max-width: 768px) {
+  .lokasi {
+    padding: 60px 5%;
+  }
+  .maps-iframe {
+    height: 300px;
+  }
+}
+.lokasi {
+  animation: fadeUp 0.8s ease-out;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

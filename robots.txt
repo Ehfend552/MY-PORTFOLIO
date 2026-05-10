@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://fendisetiaonedev.vercel.app/sitemap.xml
